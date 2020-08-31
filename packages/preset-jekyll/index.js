@@ -149,6 +149,7 @@ export const JekyllPreset = class {
       ...(properties['repost-of'] && {'repost-of': properties['repost-of']}),
       ...(properties['in-reply-to'] && {'in-reply-to': properties['in-reply-to']}),
       ...(properties['syndicate-to'] && {'syndicate-to': properties['syndicate-to']}),
+      ...(properties.references && {references: properties.references}),
       ...(properties['post-status'] === 'draft' && {draft: true}),
       ...(properties.visibility && {visibility: properties.visibility})
     };
